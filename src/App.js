@@ -112,13 +112,16 @@ function App() {
       key={cat}
       onClick={() => setCategory(cat)}
       style={{
-        padding: "10px 15px",
-        border: "none",
-        borderRadius: "5px",
-        cursor: "pointer",
-        backgroundColor:
-          category === cat ? "#febd69" : "#ddd"
-      }}
+  padding: "10px 15px",
+  border: "1px solid #ddd",
+  borderRadius: "20px",
+  cursor: "pointer",
+  backgroundColor: category === cat ? "#131921" : "white",
+  color: category === cat ? "white" : "black",
+  fontWeight: "bold",
+  transition: "0.2s ease"
+}}
+      
     >
       {cat}
     </button>
