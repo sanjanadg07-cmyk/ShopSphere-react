@@ -74,7 +74,10 @@ function App() {
           padding: "15px",
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center"
+          alignItems: "center",
+          position: "sticky",
+          top: "0",
+          zIndex: "1000",
         }}
       >
         <h1>ShopSphere</h1>
