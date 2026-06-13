@@ -96,24 +96,31 @@ function App() {
 
       {/* Search Bar */}
       <div
-        style={{
-          textAlign: "center",
-          marginTop: "20px"
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          style={{
-            padding: "10px",
-            width: "300px",
-            borderRadius: "5px",
-            border: "1px solid gray"
-          }}
-        />
-      </div>
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "10px",
+    marginTop: "20px",
+    flexWrap: "wrap"
+  }}
+>
+  {["All", "Electronics", "Fashion", "Home", "Beauty"].map((cat) => (
+    <button
+      key={cat}
+      onClick={() => setCategory(cat)}
+      style={{
+        padding: "10px 15px",
+        border: "none",
+        borderRadius: "5px",
+        cursor: "pointer",
+        backgroundColor:
+          category === cat ? "#febd69" : "#ddd"
+      }}
+    >
+      {cat}
+    </button>
+  ))}
+</div>
 
       {/* Hero Section */}
       <div
