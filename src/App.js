@@ -145,9 +145,16 @@ function App() {
         }}
       >
         {products
-          .filter((product) =>
-            product.name.toLowerCase().includes(search.toLowerCase())
-          )
+          .filter((product) => {
+  const matchSearch = product.name
+    .toLowerCase()
+    .includes(search.toLowerCase());
+
+  const matchCategory =
+    category === "All" || product.category === category;
+
+  return matchSearch && matchCategory;
+})
           .map((product, index) => (
             <ProductCard
               key={index}
