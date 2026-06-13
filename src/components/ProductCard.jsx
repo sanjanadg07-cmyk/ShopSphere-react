@@ -1,15 +1,19 @@
 function ProductCard({ product, setCartCount, cartCount }) {
   return (
     <div
-      style={{
-        width: "250px",
-        backgroundColor: "white",
-        borderRadius: "10px",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-        padding: "15px",
-        textAlign: "center"
-      }}
-    >
+  style={{
+  width: "100%",
+  backgroundColor: "white",
+  borderRadius: "10px",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+  padding: "15px",
+  textAlign: "center",
+  transition: "transform 0.2s ease",
+  cursor: "pointer"
+}}
+onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.03)"}
+onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+>
       <img
         src={product.image}
         alt={product.name}
