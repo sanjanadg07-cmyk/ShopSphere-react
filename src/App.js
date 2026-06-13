@@ -135,15 +135,13 @@ function App() {
 
       {/* Product Section */}
       <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "20px",
-          flexWrap: "wrap",
-          marginTop: "30px",
-          padding: "20px"
-        }}
-      >
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "20px",
+    padding: "20px"
+  }}
+>
         {products
           .filter((product) => {
   const matchSearch = product.name
