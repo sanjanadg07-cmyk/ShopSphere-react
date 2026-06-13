@@ -23,7 +23,16 @@ onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
         }}
       />
 
-      <h3>{product.name}</h3>
+      <div
+  style={{
+    fontSize: "18px",
+    fontWeight: "bold",
+    color: "#B12704",
+    margin: "10px 0"
+  }}
+>
+  {product.price}
+</div>
 
       <p>Best quality product</p>
 
